@@ -59,7 +59,7 @@ app.post("/submit-form", (req, res) => {
 
 // Catch-all handler to serve index.html for any other routes
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Start the server
