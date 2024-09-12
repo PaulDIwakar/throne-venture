@@ -13,7 +13,7 @@ const Gallery = () => {
 
   return (
     <div className="py-32 bg-gray-100">
-      <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
+      <h2 className="text-3xl font-semibold text-center text-tblue mb-8">
         Gallery
       </h2>
       <div className="container mx-auto px-4">

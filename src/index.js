@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom"; // Import Router
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -8,7 +9,11 @@ import "./styles.css"; // Import your styles
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      {" "}
+      {/* Wrap App with Router */}
+      <App />
+    </Router>
   </React.StrictMode>
 );
 

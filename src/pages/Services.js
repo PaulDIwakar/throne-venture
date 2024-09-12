@@ -1,37 +1,39 @@
 import React from "react";
 
 function Services() {
-  const facilities = [
+  const services = [
+    { name: "RPT", image: "https://via.placeholder.com/300" },
+    { name: "Mould Design", image: "https://via.placeholder.com/300" },
+    { name: "Soft Moulds", image: "https://via.placeholder.com/300" },
+    { name: "Injection Moulds", image: "https://via.placeholder.com/300" },
     {
-      name: "State-of-the-Art Infrastructure",
-      description: "We offer top-notch facilities for innovation.",
+      name: "Plastic part production",
+      image: "https://via.placeholder.com/300",
     },
-    {
-      name: "Global Offices",
-      description: "We have offices in key locations worldwide.",
-    },
-    {
-      name: "Research and Development",
-      description: "Our R&D centers lead the industry.",
-    },
+    { name: "Secondary Operation", image: "https://via.placeholder.com/300" },
+    { name: "Assembly", image: "https://via.placeholder.com/300" },
+    { name: "mould maintenance", image: "https://via.placeholder.com/300" },
   ];
+
   return (
-    <div className="">
-      <div className="py-32 bg-white">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center text-tblue">
-            Services
-          </h2>
-          <div className="mt-12 grid grid-cols-1 mx-10 md:grid-cols-3 gap-8">
-            {facilities.map((facility, index) => (
-              <div key={index} className="p-8 bg-gray-100 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-tgreen">
-                  {facility.name}
-                </h3>
-                <p className="mt-4 text-gray-700">{facility.description}</p>
-              </div>
-            ))}
-          </div>
+    <div className="py-32 bg-gray-100">
+      <h2 className="text-3xl font-semibold text-center text-tblue mb-8">
+        Our Services
+      </h2>
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="text-center">
+              <img
+                src={service.image}
+                alt={service.name}
+                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+              />
+              <h3 className="mt-4 text-xl font-medium text-gray-700">
+                {service.name}
+              </h3>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -10,6 +10,10 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
+  const handleNavigationClick = () => {
+    toggleMenu(); // Close the menu when a link is clicked
+  };
+
   return (
     <div className="fixed flex flex-row h-20 shadow-lg justify-between w-full z-50 top-0 bg-white">
       <div className="flex cursor-pointer ml-4">
@@ -31,11 +35,6 @@ function Header() {
           </button>
         </div>
         {/* Navigation Links */}
-        {/* <nav
-          className={`${
-            isOpen ? "block" : "hidden"
-          } tablet:flex tablet:space-x-7 cursor-pointer py-2 text-tblue mt-4 tablet:mt-0 absolute tablet:relative bg-white w-full tablet:w-auto top-20 left-0 tablet:top-auto tablet:left-auto shadow-md tablet:shadow-none`}
-        > */}
         <nav
           className={`${
             isOpen ? "block" : "hidden"
@@ -43,37 +42,46 @@ function Header() {
         >
           <Link
             to="/"
+            onClick={handleNavigationClick}
             className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center"
           >
             Home
           </Link>
           <Link
             to="/services"
+            onClick={handleNavigationClick}
             className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center"
           >
             Services
           </Link>
-          <Link className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center">
+          <Link
+            to="/facility"
+            onClick={handleNavigationClick}
+            className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center"
+          >
             Facilities
           </Link>
-          <Link className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center">
+          <Link
+            to={"/certifications"}
+            onClick={handleNavigationClick}
+            className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center"
+          >
             Certifications
           </Link>
-          {/* <Link className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center">
-            Achievements
-          </Link> */}
           <Link
             to="/gallery"
+            onClick={handleNavigationClick}
             className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center"
           >
             Gallery
           </Link>
-          <Link className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center">
+          <Link
+            to="/contactus"
+            onClick={handleNavigationClick}
+            className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center"
+          >
             Contact Us
           </Link>
-          {/* <Link className="block tablet:inline-block hover:text-tgreen text-md ml-5 mt-1 text-center">
-            About Us
-          </Link> */}
         </nav>
       </div>
     </div>

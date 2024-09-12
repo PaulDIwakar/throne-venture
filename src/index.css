@@ -19,3 +19,33 @@ code {
 div {
   font-family: itcbm, sans-serif;
 }
+.scroll-container {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-container .flex {
+  display: inline-flex;
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Hide scrollbar for IE, Edge */
+.scroll-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
