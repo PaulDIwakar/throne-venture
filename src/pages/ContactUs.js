@@ -19,7 +19,7 @@ const ContactUs = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3001/submit-form", {
+      const response = await fetch("https://throneventure.com/submit-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
