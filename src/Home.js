@@ -12,6 +12,7 @@ import vernier_caliper from "./assets/facilities/vernier-caliper.PNG";
 import pin_gauge from "./assets/facilities/pin-gauges.PNG";
 import mfi_tester from "./assets/facilities/mfi-tester.jpg";
 import injection_moulding_machine from "./assets/facilities/injection-moulding.jpg";
+import micrometer from "./assets/facilities/micro-meter.PNG";
 
 const Home = () => {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -38,7 +39,7 @@ const Home = () => {
     { name: "MFI Tester", image: mfi_tester },
     {
       name: "Micrometer",
-      image: "https://via.placeholder.com/300",
+      image: micrometer,
     },
     { name: "Push/Pull gauge", image: push_pull_gauge },
     {
