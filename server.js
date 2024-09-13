@@ -7,7 +7,13 @@ const cors = require("cors");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+
+// Add CORS configuration here
+app.use(
+  cors({
+    origin: "*", // Change this to the actual origin of your React app
+  })
+);
 
 // Path to your Excel file
 const filePath = path.join(__dirname, "ContactFormResponses.xlsx");
