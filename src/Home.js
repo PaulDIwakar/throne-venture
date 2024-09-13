@@ -52,9 +52,9 @@ const Home = () => {
 
   // Products data
   const products = [
-    { name: "Product 1", description: "Innovative solution to problem A." },
-    { name: "Product 2", description: "Revolutionary approach to issue B." },
-    { name: "Product 3", description: "Leading product in category C." },
+    { name: "Product", description: "Innovative solution to problem A." },
+    { name: "Product", description: "Revolutionary approach to issue B." },
+    { name: "Product", description: "Leading product in category C." },
   ];
 
   // Services data
