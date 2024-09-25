@@ -1,14 +1,26 @@
 import React from "react";
+import crane from "../assets/facilities/crane.PNG";
+import surface_table_and_digital_height_gauge from "../assets/facilities/surface-table-and-digital-height-gauge.PNG";
+import moisture_analyser from "../assets/facilities/moisture-analyser.PNG";
+import push_pull_gauge from "../assets/facilities/push-pull-gauge.PNG";
+import vernier_caliper from "../assets/facilities/vernier-caliper.PNG";
+import pin_gauge from "../assets/facilities/pin-gauges.PNG";
+import mfi_tester from "../assets/facilities/mfi-tester.jpg";
+import injection_moulding_machine from "../assets/facilities/injection-moulding.jpg";
+import micrometer from "../assets/facilities/micro-meter.PNG";
 
 const Gallery = () => {
   // Sample images for the gallery
   const images = [
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
+    crane,
+    surface_table_and_digital_height_gauge,
+    moisture_analyser,
+    push_pull_gauge,
+    vernier_caliper,
+    pin_gauge,
+    mfi_tester,
+    injection_moulding_machine,
+    micrometer,
   ];
 
   return (
