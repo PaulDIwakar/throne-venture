@@ -8,10 +8,10 @@ const Footer = () => {
         <div>
           <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
           <p>Throne Venture Tech LLP</p>
-          <p>Plot 1B, 1st Cross Street,</p>
+          <p>Plot 1B, 2nd Cross Street,</p>
           <p>SIDCO Industrial Estate,</p>
-          <p>Thirumudivakam,</p>
-          <p>Chennai - 600 132</p>
+          <p>Thirumudivakkam,</p>
+          <p>Chennai - 600 044</p>
           <p>Email: gopi@throneventure.com</p>
           <p>Phone: +91 9940189105</p>
           {/* <p>+91 9940189105</p> */}

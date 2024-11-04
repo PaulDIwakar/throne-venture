@@ -13,6 +13,19 @@ import pin_gauge from "./assets/facilities/pin-gauges.PNG";
 import mfi_tester from "./assets/facilities/mfi-tester.jpg";
 import injection_moulding_machine from "./assets/facilities/injection-moulding.jpg";
 import micrometer from "./assets/facilities/micro-meter.PNG";
+import product1 from "./assets/products/p1.jpeg";
+import product2 from "./assets/products/p2.jpeg";
+import product3 from "./assets/products/p3.jpeg";
+import product4 from "./assets/products/p4.jpeg";
+import product5 from "./assets/products/p5.jpeg";
+import product6 from "./assets/products/p6.jpeg";
+import product7 from "./assets/products/p7.jpeg";
+import product8 from "./assets/products/p8.jpeg";
+import rpt from "./assets/services/rpt.jpg";
+import mould from "./assets/services/md2.jpg";
+import softmoulds from "./assets/services/sfmld.jpg";
+import injection_moulds from "./assets/services/injec.jpg";
+import plastic_injection_mould from "./assets/services/plastic-injection-molding-1.jpg";
 
 const Home = () => {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -51,54 +64,77 @@ const Home = () => {
   ];
 
   // Products data
+  // const products = [
+  //   { name: "Product", description: "Innovative solution to problem A." },
+  //   { name: "Product", description: "Revolutionary approach to issue B." },
+  //   { name: "Product", description: "Leading product in category C." },
+  // ];
+
   const products = [
-    { name: "Product", description: "Innovative solution to problem A." },
-    { name: "Product", description: "Revolutionary approach to issue B." },
-    { name: "Product", description: "Leading product in category C." },
+    {
+      name: "",
+      image: product1,
+    },
+    {
+      name: "",
+      image: product2,
+    },
+    {
+      name: "",
+      image: product3,
+    },
+    {
+      name: "",
+      image: product4,
+    },
+    {
+      name: "",
+      image: product5,
+    },
+    {
+      name: "",
+      image: product6,
+    },
+    {
+      name: "",
+      image: product7,
+    },
+    {
+      name: "",
+      image: product8,
+    },
+    // { name: "Crane", image: crane },
+    // {
+    //   name: "surface table and digital height gauge",
+    //   image: surface_table_and_digital_height_gauge,
+    // },
+    // { name: "MFI Tester", image: mfi_tester },
+    // {
+    //   name: "Micrometer",
+    //   image: micrometer,
+    // },
+    // { name: "Push/Pull gauge", image: push_pull_gauge },
+    // {
+    //   name: "Digital Vernier caliper",
+    //   image: vernier_caliper,
+    // },
+    // { name: "Pin gauges", image: pin_gauge },
+    // { name: "Moisture Analyser", image: moisture_analyser },
   ];
 
   // Services data
   const services = [
+    { name: "RPT", image: rpt },
+    { name: "Mould Design", image: mould },
+    { name: "Soft Moulds", image: softmoulds },
+    { name: "Injection Moulds", image: injection_moulds },
     {
-      name: "RPT",
-      //description: "Expert advice to drive your business forward.",
-      imageUrl: "path_to_service_image1.jpg",
+      name: "Plastic Injection Mould",
+      image: plastic_injection_mould,
     },
-    {
-      name: "Mould Design",
-      // description: "Cutting-edge solutions tailored to your needs.",
-      imageUrl: "path_to_service_image2.jpg",
-    },
-    {
-      name: "Soft Moulds",
-      // description: "Reliable and ongoing support for all our clients.",
-      imageUrl: "path_to_service_image3.jpg",
-    },
-    {
-      name: "Injection Moulds",
-      // description: "Reliable and ongoing support for all our clients.",
-      imageUrl: "path_to_service_image3.jpg",
-    },
-    {
-      name: "Plastic part production",
-      // description: "Reliable and ongoing support for all our clients.",
-      imageUrl: "path_to_service_image3.jpg",
-    },
-    {
-      name: "Secondary Operation",
-      // description: "Reliable and ongoing support for all our clients.",
-      imageUrl: "path_to_service_image3.jpg",
-    },
-    {
-      name: "Assembly",
-      // description: "Reliable and ongoing support for all our clients.",
-      imageUrl: "path_to_service_image3.jpg",
-    },
-    {
-      name: "mould maintenance",
-      // description: "Reliable and ongoing support for all our clients.",
-      imageUrl: "path_to_service_image3.jpg",
-    },
+    { name: "Secondary Operation", image: "https://via.placeholder.com/300" },
+    { name: "Assembly", image: "https://via.placeholder.com/300" },
+    { name: "mould maintenance", image: "https://via.placeholder.com/300" },
   ];
 
   const learnMoreRef = useRef(null);
@@ -125,7 +161,7 @@ const Home = () => {
             Welcome to Throne Venture Tech LLP
           </h1>
           <p className="mt-4 text-xl">
-            One step solution for all your plastic needs
+            One stop solution for all your plastic needs
           </p>
           <button
             onClick={() => scrollToSection(learnMoreRef)}
@@ -211,18 +247,42 @@ const Home = () => {
       </div>
 
       {/* Products Section */}
-      <div className="py-16 bg-gray-100">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center">Our Products</h2>
-          <div className="mt-12 grid grid-cols-1 mx-10 md:grid-cols-3 gap-8">
-            {products.map((product, index) => (
-              <div key={index} className="p-8 bg-white rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-tgreen">
-                  {product.name}
-                </h3>
-                <p className="mt-4 text-gray-700">{product.description}</p>
-              </div>
-            ))}
+      <div className="py-16 bg-white overflow-hidden">
+        <div className="relative">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+            Our Products
+          </h2>
+
+          <div className="scroll-container flex space-x-8 overflow-hidden">
+            <div className="flex space-x-8">
+              {products.map((facility, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 bg-gray-100 rounded-lg shadow-lg w-80 cursor-pointer"
+                  // onClick={() => navigate("/facility")} // Navigate to /services
+                >
+                  <img
+                    src={facility.image}
+                    alt={facility.name}
+                    className="w-full h-48 object-fill rounded-lg"
+                  />
+                </div>
+              ))}
+              {/* Duplicate the content for seamless scrolling */}
+              {products.map((facility, index) => (
+                <div
+                  key={`duplicate-${index}`}
+                  className="flex-shrink-0 bg-gray-100 rounded-lg shadow-lg w-80 cursor-pointer"
+                  // onClick={() => navigate("/facility")} // Navigate to /services
+                >
+                  <img
+                    src={facility.image}
+                    alt={facility.name}
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -243,7 +303,7 @@ const Home = () => {
                   onClick={() => navigate("/services")} // Navigate to /services
                 >
                   <img
-                    src={service.imageUrl}
+                    src={service.image}
                     alt={service.name}
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
@@ -265,7 +325,7 @@ const Home = () => {
                   onClick={() => navigate("/services")} // Navigate to /services
                 >
                   <img
-                    src={service.imageUrl}
+                    src={service.image}
                     alt={service.name}
                     className="w-full h-48 object-cover rounded-t-lg"
                   />

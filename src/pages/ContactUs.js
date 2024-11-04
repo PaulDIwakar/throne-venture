@@ -146,13 +146,13 @@ const ContactUs = () => {
                 <p className="text-gray-600">
                   Throne Venture Tech LLP,
                   <br />
-                  Plot 1B, 1st Cross Street,
+                  Plot 1B, 2nd Cross Street,
                   <br />
                   SIDCO Industrial Estate,
                   <br />
-                  Thirumudivakam,
+                  Thirumudivakkam,
                   <br />
-                  Chennai - 600 132,
+                  Chennai - 600 044,
                 </p>
               </div>
 

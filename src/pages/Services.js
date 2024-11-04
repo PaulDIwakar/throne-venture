@@ -1,14 +1,19 @@
 import React from "react";
+import rpt from "../assets/services/rpt.jpg";
+import mould from "../assets/services/md2.jpg";
+import softmoulds from "../assets/services/sfmld.jpg";
+import injection_moulds from "../assets/services/injec.jpg";
+import plastic_injection_mould from "../assets/services/plastic-injection-molding-1.jpg";
 
 function Services() {
   const services = [
-    { name: "RPT", image: "https://via.placeholder.com/300" },
-    { name: "Mould Design", image: "https://via.placeholder.com/300" },
-    { name: "Soft Moulds", image: "https://via.placeholder.com/300" },
-    { name: "Injection Moulds", image: "https://via.placeholder.com/300" },
+    { name: "RPT", image: rpt },
+    { name: "Mould Design", image: mould },
+    { name: "Soft Moulds", image: softmoulds },
+    { name: "Injection Moulds", image: injection_moulds },
     {
-      name: "Plastic part production",
-      image: "https://via.placeholder.com/300",
+      name: "Plastic Injection Mould",
+      image: plastic_injection_mould,
     },
     { name: "Secondary Operation", image: "https://via.placeholder.com/300" },
     { name: "Assembly", image: "https://via.placeholder.com/300" },
@@ -27,7 +32,7 @@ function Services() {
               <img
                 src={service.image}
                 alt={service.name}
-                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                className="w-full h-64 object-fill rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
               />
               <h3 className="mt-4 text-xl font-medium text-gray-700">
                 {service.name}
